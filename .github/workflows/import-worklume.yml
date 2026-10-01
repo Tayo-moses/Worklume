@@ -1,0 +1,24 @@
+name: Import Worklume source
+on:
+  push:
+    paths:
+      - worklume-source.zip
+      - .github/workflows/import-worklume.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Expand uploaded website source
+        run: |
+          if [ ! -f worklume-source.zip ]; then exit 0; fi
+          unzip -o worklume-source.zip
+          git rm worklume-source.zip
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist README.md THIRD_PARTY_NOTICES.txt wrangler.toml .gitignore
+          git commit -m "Import Worklume marketing website files"
+          git push
