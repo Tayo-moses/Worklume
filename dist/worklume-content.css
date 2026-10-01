@@ -1,0 +1,13 @@
+
+.worklume-1nyUm{-webkit-mask:none!important;mask:none!important;background:none!important;position:relative}
+.worklume-1nyUm::after{content:"Worklume";color:white;font-family:Arial,sans-serif;font-size:23px;line-height:24px;font-weight:600;letter-spacing:-1px;position:absolute;inset:0}
+[data-worklume-name="Social Proof"] [data-worklume-component-type="SVG"]{background-image:none!important}
+[data-worklume-name="Social Proof"]{gap:12px!important}
+[data-worklume-name="Social Proof"] [data-worklume-name="Gartner Logo"]{display:none!important}
+.wl-service-logo{background-image:none!important;display:flex!important;align-items:center;justify-content:center;color:#9fb5c1;font:600 20px/1.2 Arial,sans-serif;white-space:nowrap}
+.wl-service-logo::after{content:attr(data-service)}
+.wl-example-counter>*{visibility:hidden!important}
+.wl-example-counter{position:relative}
+.wl-example-counter::after{content:attr(data-step);position:absolute;inset:0;font:500 64px/1.05 "Inter Display",Arial,sans-serif;letter-spacing:-.02em}
+
+.wl-service-logo>*{visibility:hidden!important}.wl-service-logo::after{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
